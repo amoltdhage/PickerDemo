@@ -9,6 +9,17 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+      <UIPickerViewDataSource,UIPickerViewDelegate>
+
+{
+    NSArray *cityNames;
+}
+
+@property (weak, nonatomic) IBOutlet UIPickerView *cityPicker;
+
+@property (weak, nonatomic) IBOutlet UILabel *labelCity;
+
+-(IBAction)getSelectedCity:(id)sender;
 
 
 @end
